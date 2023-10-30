@@ -17,7 +17,7 @@ Follow these steps to run the application:
 ### Prerequisites
 - Java 11 or higher
 - An external server (e.g., Tomcat) if deploying as a WAR
-- A relational database (H2 is used by default)
+- A relational database (hsqldb is used)
 - Maven
 
 ### Installation
