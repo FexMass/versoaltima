@@ -84,12 +84,6 @@ public class XMLProcessingService {
         return allDetails;
     }
 
-    /**
-     * Processes each record in the provided list using the additional details from the map.
-     *
-     * @param records List of {@link RecordDTO} objects to be processed.
-     * @param allDetails Map containing the record ID and its corresponding detail.
-     */
     private void processRecords(List<RecordDTO> records, Map<String, String> allDetails) {
         records.forEach(recordDTO -> this.processRecord(recordDTO, allDetails));
     }
@@ -131,17 +125,6 @@ public class XMLProcessingService {
         }
     }
 
-    /**
-     * Persists a record of type {@code  T} into the provided repository.
-     * <p>
-     * The record's ID is set, and then the record is saved using the provided JpaRepository.
-     * </p>
-     *
-     * @param <T> Type of the record extending {@link BaseRecord}.
-     * @param record The record to be persisted.
-     * @param id The ID to be set on the record.
-     * @param repository The JpaRepository used for persistence.
-     */
     private <T extends BaseRecord> void processRecord(T record, String id, JpaRepository<T, Long> repository) {
         record.setId(id);
         repository.save(record);

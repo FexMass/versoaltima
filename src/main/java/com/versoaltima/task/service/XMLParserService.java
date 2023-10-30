@@ -2,6 +2,7 @@ package com.versoaltima.task.service;
 
 import com.versoaltima.task.dto.RecordDTO;
 import com.versoaltima.task.service.xml.RecordHandler;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -24,15 +25,6 @@ public class XMLParserService {
 
     private final XMLReader reader;
 
-    /**
-     * Constructor for the XMLParserService.
-     * <p>
-     * Initializes the XML reader used for SAX parsing.
-     * </p>
-     *
-     * @throws SAXException If any SAX errors occur during processing.
-     * @throws ParserConfigurationException If a parser cannot be created which satisfies the configuration requested.
-     */
     public XMLParserService() throws SAXException, ParserConfigurationException {
         this.reader = SAXParserFactory.newInstance().newSAXParser().getXMLReader();
     }
