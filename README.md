@@ -8,6 +8,7 @@ manages records of different types in a relational database.
 
 ### Tech Stack
 Backend: Java 11, Spring Boot
+
 Build: Maven
 
 ## Getting Started
@@ -17,6 +18,7 @@ Follow these steps to run the application:
 - Java 11 or higher
 - An external server (e.g., Tomcat) if deploying as a WAR
 - A relational database (H2 is used by default)
+- Maven
 
 ### Installation
 1. Clone the repository:
@@ -46,6 +48,8 @@ Also, under Tomcat folder in the lib folder we should paste jar: hsqldb-2.7.1, s
 This ensures that when Tomcat starts up, the JVM has access to the TASK_X_PATH system property, and Spring Boot can then use this to locate the application.properties file.
 
 After that, running startup.bat will start the server at http://localhost:8080.
+
+To access application: http://localhost:8080/task or http://localhost:8080/task/api/records/process (for POST method to send XML)
 
 ### Getting application .war 
 
